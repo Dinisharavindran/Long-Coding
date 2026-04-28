@@ -1,63 +1,69 @@
-#  Online Shopping System (Java Console Application)
+# Online Shopping System (Java Console Application)
 
-##  Description
+## Problem Statement
 
-This is a simple **console-based Online Shopping System** developed in Java.
-It allows users to register as customers/sellers, manage products, add items to a cart, and simulate a checkout process with discounts.
+In many small-scale systems or learning environments, there is a need to simulate an online shopping platform that can handle:
 
----
+* Customer/Seller registration
+* Product management
+* Cart operations
+* Billing and checkout
 
-##  Features
-
-*  Add Customer or Seller
-*  Add Products with price and stock
-*  View available products
-*  Add products to cart
-*  Calculate total amount
-*  Apply coupon discount (`dini`)
-*  Simulated payment process
-*  Cart management (clear/refund)
+The challenge is to design a simple system that performs these operations efficiently using core Java concepts without relying on databases or external frameworks.
 
 ---
 
-##  Tech Stack
+## Approach / Logic Used
 
-* Language: Java
-* Concepts Used:
+The application is built using Object-Oriented Programming (OOP) principles and Java collections.
 
-  * OOP (Classes & Objects)
-  * ArrayList
-  * Loops & Conditionals
-  * User Input using Scanner
+### Key Components:
+
+* Customer Class: Stores user details (ID, name, role)
+* Products Class: Stores product details (ID, name, price, stock)
+* CartItem Class: Stores cart details (product ID, name, quantity, total)
+
+### Data Structures:
+
+* ArrayList<Customer>: Stores customers
+* ArrayList<Products>: Stores product list (menu)
+* ArrayList<CartItem>: Stores cart items
+
+### Core Logic:
+
+1. Menu-driven program using a loop and switch-case
+2. Users can:
+
+   * Add customers/sellers
+   * Add and view products
+   * Add items to cart with stock validation
+3. Cart system:
+
+   * Calculates total cost
+   * Applies coupon discount (dini gives ₹20 off)
+4. Checkout simulation:
+
+   * Option to proceed to payment
+   * Option to cancel and clear cart with refund simulation
 
 ---
 
-##  Project Structure
+## Steps to Execute the Code
 
-```
-Online.java
-Customer.java
-Products.java
-CartItem.java
-```
-
----
-
-##  How to Run
-
-### 1. Clone the repository
+### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/your-repo-name.git
+git clone https://github.com/your-username/online-shopping-java.git
+cd online-shopping-java
 ```
 
-### 2. Compile the program
+### 2. Compile the Java Files
 
 ```bash
 javac Online.java
 ```
 
-### 3. Run the program
+### 3. Run the Program
 
 ```bash
 java Online
@@ -65,7 +71,7 @@ java Online
 
 ---
 
-##  Sample Flow
+## Sample Execution Flow
 
 1. Add Customer/Seller
 2. Add Products
@@ -75,38 +81,37 @@ java Online
 
 ---
 
-##  Coupon Feature
+## Coupon Feature
 
-* Enter coupon code: `dini`
-* Flat ₹20 discount applied
-
----
-
-##  Limitations
-
-* No database (data stored in memory)
-* No GUI (console-based)
-* No authentication system
-* Limited error handling
+* Coupon Code: dini
+* Discount: 20 rupees
 
 ---
 
-##  Future Enhancements
+## Limitations
 
-* Add database (MySQL / MongoDB)
-* Build GUI using JavaFX or Web UI
-* User login & authentication
-* Order history tracking
+* Data is stored only temporarily (no database)
+* Console-based interface
+* Basic validation and error handling
+
+---
+
+## Future Enhancements
+
+* Integration with database such as MySQL or MongoDB
+* Graphical or web-based interface
+* User authentication system
+* Order history and tracking
 * Payment gateway integration
 
 ---
 
-##  Author
+## Author
 
-**Dinisha R**
+Dinisha R
 
 ---
 
-##  License
+## License
 
 This project is for educational purposes.
